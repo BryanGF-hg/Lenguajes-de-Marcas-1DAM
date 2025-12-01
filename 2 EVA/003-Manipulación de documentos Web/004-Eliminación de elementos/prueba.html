@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+ <head>
+  <style>
+      #jugador{width:20px;height:20px;background:red;position:absolute;transition:all 1s;} 
+#jugador1{width:20px;height:20px;background:red;position:absolute;transition:all 1s;}         
+  </style>
+ </head>
+ <body>
+     <div id="jugador"></div>
+     <div id="jugador1"></div>
+     <script>
+     // Creo un temporizador porque si no, nada se pone en mancha
+     let temporizador = setTimeout("bucle()",1000); 
+     // Fijarse en que se llama la función dentro de la función
+       function bucle(){
+          document.querySelector("#jugador").style.left = Math.random()*500+"px"
+document.querySelector("#jugador").style.right = Math.random()*500+"px"  
+document.querySelector("#jugador1").style.left = Math.random()*500+"px"
+document.querySelector("#jugador1").style.right = Math.random()*500+"px"          
+          clearTimeout(temporizador)   // Elimino temporizador para no acumular
+          temporizador = setTimeout("bucle()",1000); // Llamo al bucle de nuevo
+          
+       }
+
+     </script>
+ </body>
+</html> 
+      

@@ -1,0 +1,390 @@
+1.-Introducción:
+Este ejercicio consiste en crear una página web tipo currículum digital utilizando HTML y CSS. 
+El objetivo es presentar el perfil profesional de forma visual, organizada y accesible destacando la formación, habilidades, competencias técnicas y datos de contacto o más secciones del curriculum que queramos añadir.
+
+2.-Desarrollo:
+Creamos la estructura principal con <!DOCTYPE html>, etiquetas <html>, <head> y <body>:
+```
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+</head>
+<body>
+</body>
+</html>
+```
+
+Dentro del <head> incluimos metadatos, favicon:
+```
+   <title>Curriculum</title>
+   <meta charset="utf-8">
+      <!-- Etiquetas de posicionamiento -->
+    <meta name="description" content="Web de Bryan Glot Fong, estudiante">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="programacion,curso,diseño,estudiante...">
+    <meta name="author" content="Bryan Glot Fong">
+    <link rel="icon" href="bgf-favicon.png" type="image/png">
+	<meta property="og:title" content="Bryan Glot Fong">
+	<meta property="og:description" content="Web de Bryan Glot Fong, estudiante">
+	<meta property="og:image" content="bgf-favicon.png">
+	<meta property="og:url" content="https://github.com/BryanGF-hg">
+	<meta property="og:type" content="website">
+```
+
+Además incluimos estilo CSS interno con 
+Colores de fondo diferenciados (#086b5c y #889996)
+Tipografía y tamaños (html{font-size:13px;})
+Alineación y espaciado (text-align, padding, width, etc.)
+Flexbox para organizar los elementos en columnas y filas
+```
+   <style>
+    html{font-size:13px;}
+	body{width:1000px;height:1000px;background:white;display:flex;margin:auto;}
+    
+
+	#izquierda{flex:1;background:#086b5c;padding:20px;color:black;}
+	#izquierda article{width:300px;}
+	#izquierda ul{text-align:left;padding:5px;}
+    #izquierda h2{text-align:center;}
+	
+	#derecha{flex:3;padding:20px;background:#889996;}
+	#derecha p{width:450px;font-size:15px;padding:5px;}
+	#derecha h1{text-align:center;width:550px;}
+	#derecha h2{text-align:center;width:550px;}
+	#derecha h3{text-align:center;}
+
+	
+	#container {
+	  display: flex;
+	  flex-direction: column;
+	  flex-wrap: nowrap;
+	  justify-content: center;
+	  align-items:center;
+	  align-content: stretch;
+	  /* flex-flow: row nowrap; */
+	  text-align:center;
+	  width:550px;
+	}
+
+
+	.item {
+	  order: 0;
+	  flex-grow: 0;
+	  flex-shrink: 1;
+	  flex-basis: auto;
+	  align-self: auto;
+	  /* flex: 0 1 auto; */
+
+	}
+
+   </style>
+```
+
+Para ampliar más en las etiquetas usada para el estilo CSS, primero empezamos con la división de la página:
+#izquierda: contiene la imagen formal, contacto y formación.
+```
+	#izquierda{flex:1;background:#086b5c;padding:20px;color:black;}
+	#izquierda article{width:300px;}
+	#izquierda ul{text-align:left;padding:5px;}
+    #izquierda h2{text-align:center;}
+```
+
+#derecha: contiene tu nombre, descripción personal, habilidades, competencias, idiomas y disponibilidad.
+```
+	#derecha{flex:3;padding:20px;background:#889996;}
+	#derecha p{width:450px;font-size:15px;padding:5px;}
+	#derecha h1{text-align:center;width:550px;}
+	#derecha h2{text-align:center;width:550px;}
+	#derecha h3{text-align:center;}
+```
+
+Dentro del bloque div derecha, tenemos una sección con id de container que nos sirve para crear una columna:
+```
+	#container {
+	  display: flex;
+	  flex-direction: column;
+	  flex-wrap: nowrap;
+	  justify-content: center;
+	  align-items:center;
+	  align-content: stretch;
+	  /* flex-flow: row nowrap; */
+	  text-align:center;
+	  width:550px;
+	}
+```
+
+También dentro del container, tenemos div con id de items:
+```
+	.item {
+	  order: 0;
+	  flex-grow: 0;
+	  flex-shrink: 1;
+	  flex-basis: auto;
+	  align-self: auto;
+	  /* flex: 0 1 auto; */
+	}
+```
+
+Para el resto del HTML tenemos que dentro del <body>, creamos 2 secciones: una izquierda para los articulos CONTACTO y FORMACION donde dentro de ellos tenemos una lista con imagenes y parráfos de informacion-adicional
+
+Y una derecha donde colocamos un header que nos permite colocar el nombre, una imagen que sirve de barra decorativa, una seccion SOBRE MI con header2 y un parrafo separa con <br>
+También creamos una subsección llamada container que contenga 4 divisores llamados items que contenga una lista desordenada en forma de columna:
+```
+<body>
+   <section id="izquierda">
+    <img id="imagenformal" src="ImagenFormaldeBryanGlotFong.jpg" alt="ImagenDeCurriculum" width="100%">
+    <article id="contacto">
+	 <h2>CONTACTO</h2>
+
+	 <ul>
+<img id="telefono" src="telefono.png" alt="favicon" width="20px" height="20px">677865724<br>
+<img id="email" src="email.png" alt="favicon" width="20px" height="20px"> bryanalexanderglotfong@alu.ceacfp.es<br>
+<img id="location" src="location.png" alt="favicon" width="20px" height="20px"> 46025 Valencia
+	 </ul>
+    </article>	
+	
+	<article id="formacion">
+	 <h2>FORMACIÓN</h2>
+	 <ul>
+	  2023 – 2025<br>
+	  <b>Bachillerato De Ciencias</b><br>
+	  IES El Clot, Valencia<br>
+	  Ampliación de conocimientos generales en diferentes áreas como Ingeniería Básica y Matemáticas<br>
+	 </ul>
+	 <ul>
+	  2022<br>
+	  <b>Web Designing Course</b><br>
+	  ICSA, Kuwait<br>
+	  Desarrollo en lenguajes de marca como HTML con CSS y Bootstrap básico<br>
+	 </ul>
+    </article>	
+   </section>
+   
+   <section id="derecha">
+    <div class="encabezado-derecha">
+	 <h1>BRYAN ALEXANDER GLOT FONG</h1>
+    </div>
+    
+	<img src="barra-decorativa.png" alt="barra-decorativa">
+	
+	<div id="informacion-adicional">
+     <h2>SOBRE MI</h2>
+	 <p>Soy una persona que puede alcanzar sus objetivos y mejorar problemas siguiendo ciertos criterios.
+	Me gusta investigar y analizar diferentes temas.
+	 <br><br>
+ Ahora estoy estudiando un Grado Superior en Desarrollo de Aplicaciones Multiplataforma, lo que me ayudará a crear herramientas útiles y sitios web personales.
+ Espero crecer tanto personalmente como en cooperación con otros.
+     </p> 
+
+		<section id="container">
+		<div id="item1">
+		 <h3>HABILIDADES</h3>
+		 <ul>
+		  <li>Empatía</li>
+		  <li>Trabajo en equipo</li>
+		  <li>Puntualidad</li>
+		  <li>Organización</li>
+		  <li>Proactividado</li>
+		  <li>Pensamiento Activo</li>
+		 </ul>
+		</div>
+
+		<div id="item1">
+		<h3>COMPETENCIAS TÉCNICAS</h3>
+		 <ul>
+		  <li>Microsoft Office</li>
+		  <li>Presentaciones Virtuales</li>
+		 </ul>
+		</div>
+		</section>
+		
+		<section id="container">
+		<div id="item2">
+		<h3>LENGUAJES</h3>
+		 <ul>
+		  <li>Inglés: B2</li>
+		  <li>Escuela Oficial de Idiomas</li>
+		  <li>Valenciano: B2</li>
+		  <li>Junta Qualificadora de Valencià</li>
+		  <li>Castellano: Nativo</li>
+		 </ul>
+		</div>
+
+
+		<div id="item2">
+		<h3>DISPONIBILIDAD</h3>
+		 <ul>
+		  <li>Disponibilidad Inmediata</li>
+		  <li>Poca movilidad geográfica</li>
+		  <li>Flexibilidad Horaria</li>
+		 </ul>
+		</div>
+		</section>
+	</div>
+   </section>
+
+</body>
+```
+
+
+4.-Conclusión
+Hemos creado una página web tipo curriculum que nos servirá para usarlos en empresa y mostrar nuestros conocimientos de HTML y CSS. Podemos mejorarlo
+añadiendo una sección de proyectos o incluso añadirlo a GitHub Pages para compartirlo de manera pública en vez de nuestro ordenador local.
+
+
+Código:
+```
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+   <title>Curriculum</title>
+   <meta charset="utf-8">
+      <!-- Etiquetas de posicionamiento -->
+    <meta name="description" content="Web de Bryan Glot Fong, estudiante">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="programacion,curso,diseño,estudiante...">
+    <meta name="author" content="Bryan Glot Fong">
+    <link rel="icon" href="bgf-favicon.png" type="image/png">
+	<meta property="og:title" content="Bryan Glot Fong">
+	<meta property="og:description" content="Web de Bryan Glot Fong, estudiante">
+	<meta property="og:image" content="bgf-favicon.png">
+	<meta property="og:url" content="https://github.com/BryanGF-hg">
+	<meta property="og:type" content="website">
+   <style>
+    html{font-size:13px;}
+	body{width:1000px;height:1000px;background:white;display:flex;margin:auto;}
+    
+
+	#izquierda{flex:1;background:#086b5c;padding:20px;color:black;}
+	#izquierda article{width:300px;}
+	#izquierda ul{text-align:left;padding:5px;}
+    #izquierda h2{text-align:center;}
+	
+	#derecha{flex:3;padding:20px;background:#889996;}
+	#derecha p{width:450px;font-size:15px;padding:5px;}
+	#derecha h1{text-align:center;width:550px;}
+	#derecha h2{text-align:center;width:550px;}
+	#derecha h3{text-align:center;}
+
+	
+	#container {
+	  display: flex;
+	  flex-direction: column;
+	  flex-wrap: nowrap;
+	  justify-content: center;
+	  align-items:center;
+	  align-content: stretch;
+	  /* flex-flow: row nowrap; */
+	  text-align:center;
+	  width:550px;
+	}
+
+
+	.item {
+	  order: 0;
+	  flex-grow: 0;
+	  flex-shrink: 1;
+	  flex-basis: auto;
+	  align-self: auto;
+	  /* flex: 0 1 auto; */
+
+	}
+
+   </style>
+</head>
+<body>
+   <section id="izquierda">
+    <img id="imagenformal" src="ImagenFormaldeBryanGlotFong.jpg" alt="ImagenDeCurriculum" width="100%">
+    <article id="contacto">
+	 <h2>CONTACTO</h2>
+
+	 <ul>
+<img id="telefono" src="telefono.png" alt="favicon" width="20px" height="20px">677865724<br>
+<img id="email" src="email.png" alt="favicon" width="20px" height="20px"> bryanalexanderglotfong@alu.ceacfp.es<br>
+<img id="location" src="location.png" alt="favicon" width="20px" height="20px"> 46025 Valencia
+	 </ul>
+    </article>	
+	
+	<article id="formacion">
+	 <h2>FORMACIÓN</h2>
+	 <ul>
+	  2023 – 2025<br>
+	  <b>Bachillerato De Ciencias</b><br>
+	  IES El Clot, Valencia<br>
+	  Ampliación de conocimientos generales en diferentes áreas como Ingeniería Básica y Matemáticas<br>
+	 </ul>
+	 <ul>
+	  2022<br>
+	  <b>Web Designing Course</b><br>
+	  ICSA, Kuwait<br>
+	  Desarrollo en lenguajes de marca como HTML con CSS y Bootstrap básico<br>
+	 </ul>
+    </article>	
+   </section>
+   
+   <section id="derecha">
+    <div class="encabezado-derecha">
+	 <h1>BRYAN ALEXANDER GLOT FONG</h1>
+    </div>
+    
+	<img src="barra-decorativa.png" alt="barra-decorativa">
+	
+	<div id="informacion-adicional">
+     <h2>SOBRE MI</h2>
+	 <p>Soy una persona que puede alcanzar sus objetivos y mejorar problemas siguiendo ciertos criterios.
+	Me gusta investigar y analizar diferentes temas.
+	 <br><br>
+ Ahora estoy estudiando un Grado Superior en Desarrollo de Aplicaciones Multiplataforma, lo que me ayudará a crear herramientas útiles y sitios web personales.
+ Espero crecer tanto personalmente como en cooperación con otros.
+     </p> 
+
+		<section id="container">
+		<div id="item1">
+		 <h3>HABILIDADES</h3>
+		 <ul>
+		  <li>Empatía</li>
+		  <li>Trabajo en equipo</li>
+		  <li>Puntualidad</li>
+		  <li>Organización</li>
+		  <li>Proactividado</li>
+		  <li>Pensamiento Activo</li>
+		 </ul>
+		</div>
+
+		<div id="item1">
+		<h3>COMPETENCIAS TÉCNICAS</h3>
+		 <ul>
+		  <li>Microsoft Office</li>
+		  <li>Presentaciones Virtuales</li>
+		 </ul>
+		</div>
+		</section>
+		
+		<section id="container">
+		<div id="item2">
+		<h3>LENGUAJES</h3>
+		 <ul>
+		  <li>Inglés: B2</li>
+		  <li>Escuela Oficial de Idiomas</li>
+		  <li>Valenciano: B2</li>
+		  <li>Junta Qualificadora de Valencià</li>
+		  <li>Castellano: Nativo</li>
+		 </ul>
+		</div>
+
+
+		<div id="item2">
+		<h3>DISPONIBILIDAD</h3>
+		 <ul>
+		  <li>Disponibilidad Inmediata</li>
+		  <li>Poca movilidad geográfica</li>
+		  <li>Flexibilidad Horaria</li>
+		 </ul>
+		</div>
+		</section>
+	</div>
+   </section>
+
+</body>
+</html>
+```

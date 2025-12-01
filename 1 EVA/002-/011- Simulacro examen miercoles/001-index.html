@@ -1,0 +1,202 @@
+1.-Introducción:
+Debemos crear una página web con HTML y CSS (interno para que pueda ser mejorado) que pueda mostrar la información y datos del curriculum que mostraremos a empresa.
+
+
+2.-Desarrollo:
+Creamos la estructura principal con <!DOCTYPE html>, etiquetas <html>, <head> y <body>:
+```
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+</head>
+<body>
+</body>
+</html>
+```
+
+Dentro del <head> incluimos el titulo, la codificación y más tarde el estilo css interno:
+```
+<head>
+ <title>Curriculum Simulacro</title>
+ <meta charset="utf-8">
+ 
+ <style>
+ </style>
+</head>
+```
+
+Dentro de la etiqueta <head>, tenemos el estilo css, donde editamos las etiquetas html y body para tengan color gris, para las etiquetas header, main y footer, tengan un colo Cyan Claro, con un margen y separación específica con el texto centrado:
+Para el main, tenemos 
+```
+ <style>
+  html,body{background:grey;font-family:sans-serif;}
+  header,main,footer{
+   background:LightCyan;
+   padding:20px;
+   width:820px;
+   margin:auto;
+   text-align:center;
+  }
+  main{
+   display:grid;
+   grid-template-columns:auto auto auto;
+   gap:20px;
+  }
+  img{
+   width:200px;
+  }
+ </style>
+```
+
+Dentro de la etiqueta <header>, creamos el título y el subtítulo necesario para presentar el curriculum:
+```
+ <header>
+  <h1>Bryan Glot Fong</h1>
+  <h2>bryan@gmail.com</h2>
+ </header>
+```
+
+Para la etiqueta <main>, desarrollamos 6 artículos donde mostramos la información de trabajo reciente, experiencia,etc:
+```
+ <main>
+  <article>
+   <p>Categoria</p>
+   <h3>Titulo</h3>
+   <p>Descripcion</p>
+   <img src="bgf-favicon.png">
+  </article>
+  
+  <article>
+   <p>Categoria</p>
+   <h3>Titulo</h3>
+   <p>Descripcion</p>
+   <img src="bgf-favicon.png">
+  </article>  
+
+  <article>
+   <p>Categoria</p>
+   <h3>Titulo</h3>
+   <p>Descripcion</p>
+   <img src="bgf-favicon.png">
+  </article>
+
+  <article>
+   <p>Categoria</p>
+   <h3>Titulo</h3>
+   <p>Descripcion</p>
+   <img src="bgf-favicon.png">
+  </article>
+
+  <article>
+   <p>Categoria</p>
+   <h3>Titulo</h3>
+   <p>Descripcion</p>
+   <img src="bgf-favicon.png">
+  </article>
+
+  <article>
+   <p>Categoria</p>
+   <h3>Titulo</h3>
+   <p>Descripcion</p>
+   <img src="bgf-favicon.png">
+  </article>  
+ </main>
+```
+
+Creamos un <footer>, donde mostramos quien ha hecho el sitio web:
+```
+ <footer>
+  (c) 2025 Bryan Glot Fong
+ </footer>
+```
+
+
+3.-Aplicación:
+Mostrar información de manera digital, ordenada, limpia
+
+
+4.-Conclusión:
+Con el desarrollo de una página web que contenga elementos HTML y desarrollo visual CSS, podemos aplicarlo para muchas cosas como un curriculum, una tienda online o un listado de información. Puede que sea directo e eficiente y a pesar de no que tenga dinámica es muy útil.
+
+Código:
+```
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+ <title>Curriculum Simulacro</title>
+ <meta charset="utf-8">
+ 
+ <style>
+  html,body{background:grey;font-family:sans-serif;}
+  header,main,footer{
+   background:LightCyan;
+   padding:20px;
+   width:820px;
+   margin:auto;
+   text-align:center;
+  }
+  main{
+   display:grid;
+   grid-template-columns:auto auto auto;
+   gap:20px;
+  }
+  img{
+   width:200px;
+  }
+ </style>
+</head>
+
+<body>
+ <header>
+  <h1>Bryan Glot Fong</h1>
+  <h2>bryan@gmail.com</h2>
+ </header>
+ <main>
+  <article>
+   <p>Categoria</p>
+   <h3>Titulo</h3>
+   <p>Descripcion</p>
+   <img src="bgf-favicon.png">
+  </article>
+  
+  <article>
+   <p>Categoria</p>
+   <h3>Titulo</h3>
+   <p>Descripcion</p>
+   <img src="bgf-favicon.png">
+  </article>  
+
+  <article>
+   <p>Categoria</p>
+   <h3>Titulo</h3>
+   <p>Descripcion</p>
+   <img src="bgf-favicon.png">
+  </article>
+
+  <article>
+   <p>Categoria</p>
+   <h3>Titulo</h3>
+   <p>Descripcion</p>
+   <img src="bgf-favicon.png">
+  </article>
+
+  <article>
+   <p>Categoria</p>
+   <h3>Titulo</h3>
+   <p>Descripcion</p>
+   <img src="bgf-favicon.png">
+  </article>
+
+  <article>
+   <p>Categoria</p>
+   <h3>Titulo</h3>
+   <p>Descripcion</p>
+   <img src="bgf-favicon.png">
+  </article>  
+ </main>
+ <footer>
+  (c) 2025 Bryan Glot Fong
+ </footer>
+</body>
+</html>
+```

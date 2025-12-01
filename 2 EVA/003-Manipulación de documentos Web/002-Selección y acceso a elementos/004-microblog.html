@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Javascript</title>
+  <meta charset="utf-8">
+  
+ </head>
+ <body>
+  <header><h1>Blog de Bryan Glot</h1></header>
+  <main>
+  
+  </main>
+  <script>
+   const articulos = [
+    "Primer Articulo","Segundo Articulo","Tercer Articulo"
+   ];   
+   
+   const contenedor = document.querySelector("main");
+   for(let i = 0;i<articulos.length;i++){ // Recorro los artículos
+     contenedor.innerHTML += "<h3>"+articulos[i]+"</h3>";
+   }
+  </script>
+  <footer>Finis</footer>
+ </body>
+</html>
