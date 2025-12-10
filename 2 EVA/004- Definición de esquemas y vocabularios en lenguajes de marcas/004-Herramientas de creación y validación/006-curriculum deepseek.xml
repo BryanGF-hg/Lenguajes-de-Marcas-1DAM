@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="cv_schema.xsd">
+  
+  <!-- Información personal -->
+  <informacion_personal>
+    <nombre>Bryan</nombre>
+    <apellidos>Glot Fong</apellidos>
+    <fecha_nacimiento>1988-09-22</fecha_nacimiento>
+    <nacionalidad>Mexicana</nacionalidad>
+    <estado_civil>Soltero</estado_civil>
+    
+    <contacto>
+      <direccion>
+        <calle>Avenida Tecnológico, 456</calle>
+        <ciudad>Guadalajara</ciudad>
+        <codigo_postal>44100</codigo_postal>
+        <pais>México</pais>
+      </direccion>
+      
+      <telefonos>
+        <telefono tipo="movil">+52 33 1234 5678</telefono>
+        <telefono tipo="fijo">+52 33 9876 5432</telefono>
+      </telefonos>
+      
+      <correos_electronicos>
+        <correo tipo="personal">bryan.glot@email.com</correo>
+        <correo tipo="profesional">b.glotfong@empresa.com</correo>
+      </correos_electronicos>
+      
+      <webs>
+        <web tipo="linkedin">linkedin.com/in/bryanglotfong</web>
+        <web tipo="portfolio">bryanglot.dev</web>
+        <web tipo="github">github.com/bryanglot</web>
+      </webs>
+    </contacto>
+  </informacion_personal>
+  
+  <!-- Resumen profesional -->
+  <resumen_profesional>
+    <titulo>Desarrollador Full Stack Senior con 8+ años de experiencia</titulo>
+    <descripcion>
+      Profesional especializado en desarrollo web con amplia experiencia en arquitecturas escalables,
+      microservicios y tecnologías frontend y backend. Apasionado por las mejores prácticas de código,
+      metodologías ágiles y formación de equipos técnicos. Busco oportunidades desafiantes donde pueda
+      aportar mi experiencia en proyectos innovadores.
+    </descripcion>
+  </resumen_profesional>
+  
+  <!-- Experiencia laboral -->
+  <experiencia_laboral>
+    <experiencia id="exp1">
+      <empresa>TechInnovate México</empresa>
+      <puesto>Lead Developer</puesto>
+      <fecha_inicio>2020-03-01</fecha_inicio>
+      <fecha_fin>2024-01-31</fecha_fin>
+      <actual>false</actual>
+      <descripcion>
+        Lideré un equipo de 6 desarrolladores en la creación de una plataforma SaaS de gestión empresarial.
+        Responsable de la arquitectura técnica, code reviews y mentoría del equipo.
+      </descripcion>
+      <logros>
+        <logro>Reducción del 40% en tiempo de despliegue mediante implementación de CI/CD</logro>
+        <logro>Mentoría de 3 junior developers que fueron promovidos a posiciones senior</logro>
+        <logro>Arquitectura de microservicios que escaló a 100k usuarios activos</logro>
+      </logros>
+      <tecnologias>
+        <tecnologia>Java Spring Boot</tecnologia>
+        <tecnologia>React</tecnologia>
+        <tecnologia>Docker</tecnologia>
+        <tecnologia>AWS</tecnologia>
+        <tecnologia>Kubernetes</tecnologia>
+      </tecnologias>
+    </experiencia>
+    
+    <experiencia id="exp2">
+      <empresa>DigitalSolutions MX</empresa>
+      <puesto>Senior Backend Developer</puesto>
+      <fecha_inicio>2017-07-01</fecha_inicio>
+      <fecha_fin>2020-02-28</fecha_fin>
+      <actual>false</actual>
+      <descripcion>
+        Desarrollo de APIs RESTful para aplicaciones móviles y web. Colaboración en arquitectura de bases
+        de datos y optimización de rendimiento.
+      </descripcion>
+      <logros>
+        <logro>Optimización de queries que redujo tiempos de respuesta en un 70%</logro>
+        <logro>Implementación de sistema de cache que manejó 1M+ requests diarias</logro>
+      </logros>
+      <tecnologias>
+        <tecnologia>Node.js</tecnologia>
+        <tecnologia>MongoDB</tecnologia>
+        <tecnologia>Redis</tecnologia>
+        <tecnologia>Express</tecnologia>
+      </tecnologias>
+    </experiencia>
+    
+    <experiencia id="exp3">
+      <empresa>StartUpGDL</empresa>
+      <puesto>Full Stack Developer</puesto>
+      <fecha_inicio>2015-09-01</fecha_inicio>
+      <fecha_fin>2017-06-30</fecha_fin>
+      <actual>false</actual>
+      <descripcion>
+        Desarrollo completo de aplicaciones web desde frontend hasta backend. Participación en todas las
+        fases del ciclo de vida del software.
+      </descripcion>
+      <logros>
+        <logro>Desarrollo de aplicación que obtuvo 50k usuarios en primer año</logro>
+        <logro>Implementación de sistema de pagos integrado</logro>
+      </logros>
+      <tecnologias>
+        <tecnologia>PHP</tecnologia>
+        <tecnologia>JavaScript</tecnologia>
+        <tecnologia>MySQL</tecnologia>
+        <tecnologia>jQuery</tecnologia>
+      </tecnologias>
+    </experiencia>
+  </experiencia_laboral>
+  
+  <!-- Formación académica -->
+  <formacion_academica>
+    <formacion id="edu1">
+      <titulo>Máster en Ingeniería de Software</titulo>
+      <institucion>Universidad de Guadalajara</institucion>
+      <fecha_inicio>2012-09-01</fecha_inicio>
+      <fecha_fin>2014-06-30</fecha_fin>
+      <finalizado>true</finalizado>
+      <nota_media>8.5</nota_media>
+    </formacion>
+    
+    <formacion id="edu2">
+      <titulo>Grado en Ingeniería Informática</titulo>
+      <institucion>Universidad de Guadalajara</institucion>
+      <fecha_inicio>2008-09-01</fecha_inicio>
+      <fecha_fin>2012-06-30</fecha_fin>
+      <finalizado>true</finalizado>
+      <nota_media>8.2</nota_media>
+    </formacion>
+  </formacion_academica>
+  
+  <!-- Certificaciones -->
+  <certificaciones>
+    <certificacion>
+      <nombre>AWS Certified Solutions Architect - Associate</nombre>
+      <institucion>Amazon Web Services</institucion>
+      <fecha_obtencion>2021-03-15</fecha_obtencion>
+      <validez_hasta>2024-03-15</validez_hasta>
+    </certificacion>
+    
+    <certificacion>
+      <nombre>Scrum Master Professional Certificate</nombre>
+      <institucion>Scrum.org</institucion>
+      <fecha_obtencion>2020-08-22</fecha_obtencion>
+      <validez_hasta>2024-08-22</validez_hasta>
+    </certificacion>
+    
+    <certificacion>
+      <nombre>Oracle Certified Professional, Java SE 8 Programmer</nombre>
+      <institucion>Oracle University</institucion>
+      <fecha_obtencion>2019-11-10</fecha_obtencion>
+      <validez_hasta>2024-11-10</validez_hasta>
+    </certificacion>
+  </certificaciones>
+  
+  <!-- Habilidades técnicas -->
+  <habilidades_tecnicas>
+    <categoria nombre="Lenguajes de Programación">
+      <habilidad nivel="avanzado">Java</habilidad>
+      <habilidad nivel="avanzado">JavaScript</habilidad>
+      <habilidad nivel="intermedio">Python</habilidad>
+      <habilidad nivel="intermedio">TypeScript</habilidad>
+      <habilidad nivel="basico">Go</habilidad>
+    </categoria>
+    
+    <categoria nombre="Frameworks y Librerías">
+      <habilidad nivel="avanzado">Spring Boot</habilidad>
+      <habilidad nivel="avanzado">React</habilidad>
+      <habilidad nivel="intermedio">Angular</habilidad>
+      <habilidad nivel="intermedio">Node.js</habilidad>
+      <habilidad nivel="avanzado">Express</habilidad>
+    </categoria>
+    
+    <categoria nombre="Bases de Datos">
+      <habilidad nivel="avanzado">MySQL</habilidad>
+      <habilidad nivel="avanzado">PostgreSQL</habilidad>
+      <habilidad nivel="intermedio">MongoDB</habilidad>
+      <habilidad nivel="intermedio">Redis</habilidad>
+      <habilidad nivel="basico">Elasticsearch</habilidad>
+    </categoria>
+    
+    <categoria nombre="DevOps y Cloud">
+      <habilidad nivel="avanzado">Docker</habilidad>
+      <habilidad nivel="intermedio">Kubernetes</habilidad>
+      <habilidad nivel="avanzado">AWS</habilidad>
+      <habilidad nivel="intermedio">GitLab CI/CD</habilidad>
+      <habilidad nivel="intermedio">Jenkins</habilidad>
+    </categoria>
+    
+    <categoria nombre="Herramientas y Metodologías">
+      <habilidad nivel="avanzado">Git</habilidad>
+      <habilidad nivel="avanzado">Scrum</habilidad>
+      <habilidad nivel="intermedio">Kanban</habilidad>
+      <habilidad nivel="avanzado">JIRA</habilidad>
+      <habilidad nivel="intermedio">Confluence</habilidad>
+    </categoria>
+  </habilidades_tecnicas>
+  
+  <!-- Idiomas -->
+  <idiomas>
+    <idioma>
+      <nombre>Español</nombre>
+      <nivel_hablado>nativo</nivel_hablado>
+      <nivel_escrito>nativo</nivel_escrito>
+      <certificacion>Nativo</certificacion>
+    </idioma>
+    
+    <idioma>
+      <nombre>Inglés</nombre>
+      <nivel_hablado>avanzado</nivel_hablado>
+      <nivel_escrito>avanzado</nivel_escrito>
+      <certificacion>TOEFL iBT 105</certificacion>
+      <fecha_certificacion>2019-05-20</fecha_certificacion>
+    </idioma>
+  </idiomas>
+  
+  <!-- Proyectos personales -->
+  <proyectos_personales>
+    <proyecto>
+      <nombre>TaskMaster Pro</nombre>
+      <descripcion>Aplicación de gestión de tareas con IA integrada para priorización automática</descripcion>
+      <tecnologias>
+        <tecnologia>React Native</tecnologia>
+        <tecnologia>Node.js</tecnologia>
+        <tecnologia>TensorFlow.js</tecnologia>
+        <tecnologia>MongoDB</tecnologia>
+      </tecnologias>
+      <enlace_repositorio>github.com/bryanglot/taskmaster-pro</enlace_repositorio>
+      <estado>activo</estado>
+    </proyecto>
+    
+    <proyecto>
+      <nombre>CodeReview Assistant</nombre>
+      <descripcion>Plugin para IDEs que analiza código y sugiere mejoras automáticamente</descripcion>
+      <tecnologias>
+        <tecnologia>Python</tecnologia>
+        <tecnologia>VSCode Extension API</tecnologia>
+        <tecnologia>OpenAI API</tecnologia>
+      </tecnologias>
+      <enlace_repositorio>github.com/bryanglot/codereview-assistant</enlace_repositorio>
+      <estado>en_desarrollo</estado>
+    </proyecto>
+  </proyectos_personales>
+  
+  <!-- Intereses y actividades -->
+  <intereses>
+    <interes>Tecnologías emergentes (AI/ML, Blockchain)</interes>
+    <interes>Contribuir a proyectos open source</interes>
+    <interes>Fotografía digital</interes>
+    <interes>Senderismo y montañismo</interes>
+    <interes>Robótica educativa</interes>
+    <interes>Lectura de ciencia ficción</interes>
+  </intereses>
+  
+  <!-- Información adicional -->
+  <informacion_adicional>
+    <disponibilidad>Disponibilidad inmediata</disponibilidad>
+    <movilidad_geografica>
+      <nacional>true</nacional>
+      <internacional>true</internacional>
+      <remoto>true</remoto>
+      <hibrido>true</hibrido>
+    </movilidad_geografica>
+    <expectativa_salarial>50.000 - 65.000 MXN mensuales</expectativa_salarial>
+    <periodo_preaviso>30 días</periodo_preaviso>
+  </informacion_adicional>
+  
+  <!-- Referencias -->
+  <referencias>
+    <referencia tipo="profesional">
+      <nombre>María González</nombre>
+      <cargo>CTO en TechInnovate México</cargo>
+      <empresa>TechInnovate México</empresa>
+      <telefono>+52 33 611 222 333</telefono>
+      <correo>maria.gonzalez@techinnovate.com</correo>
+      <disponible_contactar>true</disponible_contactar>
+    </referencia>
+    
+    <referencia tipo="profesional">
+      <nombre>Carlos Ruiz</nombre>
+      <cargo>Project Manager en DigitalSolutions MX</cargo>
+      <empresa>DigitalSolutions MX</empresa>
+      <telefono>+52 33 622 333 444</telefono>
+      <correo>carlos.ruiz@digitalsolutions.com</correo>
+      <disponible_contactar>true</disponible_contactar>
+    </referencia>
+  </referencias>
+  
+</curriculum>

@@ -1,0 +1,159 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <!-- Elemento raíz -->
+  <xs:element name="curriculum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="datosPersonales" type="DatosPersonalesType"/>
+        <xs:element name="perfil" type="xs:string" minOccurs="0"/>
+        <xs:element name="experiencia" type="ExperienciaType" minOccurs="0"/>
+        <xs:element name="educacion" type="EducacionType" minOccurs="0"/>
+        <xs:element name="habilidades" type="HabilidadesType" minOccurs="0"/>
+        <xs:element name="idiomas" type="IdiomasType" minOccurs="0"/>
+        <xs:element name="certificaciones" type="CertificacionesType" minOccurs="0"/>
+        <xs:element name="proyectos" type="ProyectosType" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Tipos compuestos -->
+  <xs:complexType name="DatosPersonalesType">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="apellidos" type="xs:string"/>
+      <xs:element name="puestoActual" type="xs:string" minOccurs="0"/>
+      <xs:element name="ubicacion" type="xs:string" minOccurs="0"/>
+      <xs:element name="contacto" type="ContactoType" minOccurs="0"/>
+      <xs:element name="links" type="LinksType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="fotoURL" type="xs:anyURI" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="ContactoType">
+    <xs:sequence>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+      <xs:element name="telefono" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="direccion" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="LinksType">
+    <xs:sequence>
+      <xs:element name="web" type="xs:anyURI" minOccurs="0"/>
+      <xs:element name="linkedin" type="xs:anyURI" minOccurs="0"/>
+      <xs:element name="github" type="xs:anyURI" minOccurs="0"/>
+      <xs:element name="portfolio" type="xs:anyURI" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ExperienciaType">
+    <xs:sequence>
+      <xs:element name="puesto" type="PuestoType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PuestoType">
+    <xs:sequence>
+      <xs:element name="titulo" type="xs:string"/>
+      <xs:element name="empresa" type="xs:string"/>
+      <xs:element name="ubicacion" type="xs:string" minOccurs="0"/>
+      <xs:element name="fechaInicio" type="xs:gYearMonth"/>
+      <xs:element name="fechaFin" type="xs:gYearMonth" minOccurs="0"/>
+      <xs:element name="actual" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="logros" type="LogrosType" minOccurs="0"/>
+      <xs:element name="responsabilidades" type="ResponsabilidadesType" minOccurs="0"/>
+      <xs:element name="tecnologias" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="LogrosType">
+    <xs:sequence>
+      <xs:element name="logro" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ResponsabilidadesType">
+    <xs:sequence>
+      <xs:element name="responsabilidad" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="EducacionType">
+    <xs:sequence>
+      <xs:element name="titulo" type="TituloAcadémicoType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TituloAcadémicoType">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="institucion" type="xs:string"/>
+      <xs:element name="ubicacion" type="xs:string" minOccurs="0"/>
+      <xs:element name="fechaInicio" type="xs:gYearMonth" minOccurs="0"/>
+      <xs:element name="fechaFin" type="xs:gYearMonth" minOccurs="0"/>
+      <xs:element name="notas" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="HabilidadesType">
+    <xs:sequence>
+      <xs:element name="habilidad" type="HabilidadType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="HabilidadType">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="nivel" type="xs:string" minOccurs="0"/> <!-- e.g., Básico / Intermedio / Avanzado -->
+      <xs:element name="categoria" type="xs:string" minOccurs="0"/> <!-- e.g., Técnicas, Blandas -->
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="IdiomasType">
+    <xs:sequence>
+      <xs:element name="idioma" type="IdiomaType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="IdiomaType">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="nivelMarco" type="xs:string" minOccurs="0"/> <!-- e.g., A2/B1/B2/C1/C2 -->
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CertificacionesType">
+    <xs:sequence>
+      <xs:element name="certificacion" type="CertificacionType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CertificacionType">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="entidad" type="xs:string" minOccurs="0"/>
+      <xs:element name="fecha" type="xs:gYearMonth" minOccurs="0"/>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ProyectosType">
+    <xs:sequence>
+      <xs:element name="proyecto" type="ProyectoType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ProyectoType">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+      <xs:element name="rol" type="xs:string" minOccurs="0"/>
+      <xs:element name="tecnologias" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="enlace" type="xs:anyURI" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+

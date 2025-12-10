@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persona>
+  <nombre>Bryan</nombre>
+  <apellidos>Glot Fong</apellidos>
+  <telefonos>
+   <telefono>1234567</telefono>
+   <telefono>1234543</telefono>
+   ....
+  </telefonos>
+</persona>

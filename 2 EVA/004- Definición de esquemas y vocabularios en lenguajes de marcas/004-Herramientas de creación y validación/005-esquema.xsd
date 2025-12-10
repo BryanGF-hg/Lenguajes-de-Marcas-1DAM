@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="curriculum">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Información personal -->
+        <xs:element name="informacion_personal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="apellidos" type="xs:string"/>
+              <xs:element name="fecha_nacimiento" type="xs:date"/>
+              <xs:element name="nacionalidad" type="xs:string"/>
+              <xs:element name="estado_civil" type="xs:string"/>
+              <xs:element name="contacto">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="direccion">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="calle" type="xs:string"/>
+                          <xs:element name="ciudad" type="xs:string"/>
+                          <xs:element name="codigo_postal" type="xs:string"/>
+                          <xs:element name="pais" type="xs:string"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="telefonos">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="telefono" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="tipo" type="xs:string" use="required"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="correos_electronicos">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="correo" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="tipo" type="xs:string" use="required"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="webs">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="web" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="tipo" type="xs:string" use="required"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <!-- Resto de elementos del curriculum -->
+        <xs:element name="resumen_profesional">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="titulo" type="xs:string"/>
+              <xs:element name="descripcion" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <xs:element name="experiencia_laboral">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="experiencia" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="empresa" type="xs:string"/>
+                    <xs:element name="puesto" type="xs:string"/>
+                    <xs:element name="fecha_inicio" type="xs:date"/>
+                    <xs:element name="fecha_fin" type="xs:date" minOccurs="0"/>
+                    <xs:element name="actual" type="xs:boolean"/>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="logros" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="logro" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="tecnologias" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="tecnologia" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:ID" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <!-- ... más definiciones para los otros elementos ... -->
+        
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
