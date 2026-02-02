@@ -1,0 +1,77 @@
+{
+  "formas": [
+    {
+      "id": "forma-1",
+      "tipo": "rectangle",
+      "left": "206.031px",
+      "top": "284.746px",
+      "width": "",
+      "height": "",
+      "texto": "Admision(form)"
+    },
+    {
+      "id": "forma-2",
+      "tipo": "rectangle",
+      "left": "354.02px",
+      "top": "283.75px",
+      "width": "",
+      "height": "",
+      "texto": "Validacion"
+    },
+    {
+      "id": "forma-3",
+      "tipo": "rectangle",
+      "left": "515.023px",
+      "top": "284.746px",
+      "width": "",
+      "height": "",
+      "texto": "Matricula"
+    },
+    {
+      "id": "forma-4",
+      "tipo": "rectangle",
+      "left": "670.031px",
+      "top": "208.758px",
+      "width": "",
+      "height": "",
+      "texto": "LMS"
+    },
+    {
+      "id": "forma-5",
+      "tipo": "rectangle",
+      "left": "671.031px",
+      "top": "281.746px",
+      "width": "",
+      "height": "",
+      "texto": "SIS"
+    },
+    {
+      "id": "forma-6",
+      "tipo": "rectangle",
+      "left": "673.023px",
+      "top": "346.758px",
+      "width": "",
+      "height": "",
+      "texto": "Conta/Fact"
+    },
+    {
+      "id": "forma-7",
+      "tipo": "text",
+      "left": "211.031px",
+      "top": "257.75px",
+      "width": "",
+      "height": "",
+      "texto": "CRM-Software de gestion de la relacion con el cliente"
+    },
+    {
+      "id": "forma-8",
+      "tipo": "text",
+      "left": "210.023px",
+      "top": "217.746px",
+      "width": "",
+      "height": "",
+      "texto": "Enterprise Resource Plannning- Software de gestion empresarial"
+    }
+  ],
+  "flechas": []
+}
